@@ -1,0 +1,77 @@
+\documentclass[paper=a4,oneside,abstract]{scrartcl}
+\usepackage[utf8]{inputenc} %+Umlaute
+\usepackage{csquotes}
+\usepackage[english,ngerman]{babel}
+\usepackage[backend=biber,
+date=long,
+style=iso-numeric,
+autolang=other,
+%bibencoding=UTF8
+]{biblatex}
+\addbibresource{maschine.bib}
+% Zeilenumbruch in Links
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+\usepackage{hyperref}
+
+% ColumnChart
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.14}
+
+\title{Das bedingungslose Grundeinkommen als Voraussetzung für die Demokratie}
+\subject{Mikroelektronik WS 2017/2018}
+\titlehead{Hochschule Augsburg}
+\author{Friedrich Beckmann}
+\date{23. Oktober 2017}                                           % Activate to display a given date or no date
+
+\begin{document}
+\shorthandoff{"}
+\maketitle
+\begin{abstract}
+Die Zustimmung zur Demokratie als Staatsform nimmt in der Bevölkerung kontinuierlich ab. Der Grund für die abnehmende Zustimmung ist eine Zunahme der wirtschaftlichen und politischen Ungleichheit. Große Bevölkerungsgruppen fühlen sich durch das politische System nicht vertreten. Das bedingungslose Grundeinkommen ist Voraussetzung für politische Teilhabe.
+\end{abstract}
+
+Die Einführung von Robotern, Computern und Automatisierungstechnik hat schon in den 1960er Jahren zu Befürchtungen geführt, dass mit zunehmender Automatisierung die Anzahl von Arbeitsplätzen und das Einkommen von Arbeitnehmern drastisch sinken würden \cite[S. 98]{ford15}. Bezogen auf reale Einkommen unter Berücksichtigung der Inflation war in den Vereinigten Staaten von Amerika das Jahr 1973 das Jahr mit dem höchsten Lohn eines durchschnittlichen Arbeitnehmers. Wie in Tabelle \ref{tab:income} dargestellt sank das Einkommen von 767 Dollar pro Woche im Jahr 1973 auf 664 Dollar im Jahr 2013. 
+\begin{table}[htp]
+\caption{Einkommen aus Arbeit pro Woche in Dollar in Preisen von 2013}
+\begin{center}
+\begin{tabular}{cc}
+Jahr & Einkommen in US\textdollar \\\hline
+1973 & 767 \\
+2013 & 664
+\end{tabular}
+\end{center}
+\label{tab:income}
+\end{table}
+Von 1950 bis 2010 stieg die Produktivität der amerikanischen Wirtschaft um 251\% während die Arbeitseinkommen nur um 113\% stiegen. Dabei entwickelte sich bis 1973 die Produktivität und das Einkommen aus Arbeit im Gleichklang \cite[S. 117]{ford15}. In Abbildung \ref{fig:gap} ist die prozentuale durchschnittliche jährliche Änderung von Produktivität und realem Stundenlohn für verschiedene Zeitperioden im Zeitraum 1947 bis 2009 in den USA dargestellt.
+
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[ybar,
+width = 0.65\textwidth,
+ylabel={Prozentuale Änderung},
+legend style={at={(0.6,0.9)}},
+symbolic x coords = {1947-73, 1973-79, 1979-90, 1990-2000, 2000-09},
+ybar = 5pt,
+nodes near coords
+]
+\addplot coordinates {(1947-73, 2.8) (1973-79, 1.1) (1979-90, 1.4) (1990-2000, 2.1) (2000-09, 2.5)};
+\addplot coordinates {(1947-73, 2.6) (1973-79, 0.9) (1979-90, 0.5) (1990-2000, 1.5) (2000-09, 1.1)};
+\legend{Produktivität, Stundenlohn}
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\caption{Lücke zwischen Produktivität und Arbeitseinkommen \cite{dol11}}
+\label{fig:gap}
+\end{figure}
+ 
+Die Zustimmung zur Demokratie als Staatsform nimmt seit dem zweiten Weltkrieg in den Vereinigten Staaten von Amerika und in Europa ab. Eine longitudinale Studie „World Value Surveys“ befragt seit Jahrzehnten Menschen in Europa und den USA zu ihren Werten. Die Zustimmung zur Frage „Is it essential to live in a country that is governed democratically?“ sank von 70\% Zustimmung bei den in den 1930er Jahren geborenen Amerikanern auf 30\% in der Gruppe der in den 1980er Jahren geborenen. In Europa sank der Wert von 55\% auf 45\%. Einen kompletten Wandel hat es bei der Zustimmung der wohlhabenden Bevölkerungsgruppen gegeben. So stieg die Zustimmung mit „good“ oder „very good“ zu der Aussage „to have a strong leader who doesn't have to bother with parliament and elections“ bei den wohlhabenden Bevölkerungsgruppen von 20\% im Jahr 1995 auf 35\% im Jahr 2010. Nur noch 36\% der „Millenials“ in Europa lehnen die These ab, dass es gerechtfertigt ist, dass die Armee im Falle von Unfähigkeit der Regierung die Macht übernimmt. Diese These wird von 56\% der älteren Europäer abgelehnt. \cite{foa16}
+
+In einer Studie aus dem Jahr 2013 untersuchen Carl Benedikt Frey und Michael Osborne wie stark Arbeitsplätze aufgrund von Automatisierung gefährdet sind. Nach Ihrer Analyse haben 47\% aller Arbeitsplätze in den USA ein hohes Risiko innerhalb von etwa 10 Jahren durch Automatisierung zu verschwinden \cite{frey17}\cite{frey13}. Eine Übertragung auf den deutschen Arbeitsmarkt ergibt ähnliche Werte \cite{bonin15}.
+
+Die zunehmende Ungleichheit bei den Einkommen und der zunehmende Ersatz von Arbeitsplätzen durch Automatisierung machen es fraglich ob Arbeit als Basis der Einkommensverteilung geeignet ist. Ohne Einkommen ist politische Partizipation nicht möglich. Schon 1970 wurde in den USA ein allgemeines Grundeinkommen vom republikanischen Präsidenten Nixon vorgeschlagen und vom Repräsentantenhaus angenommen~\cite{weaver70}. Das bedingungslose Grundeinkommen wie beispielsweise von Götz Werner vorgeschlagen würde Einkommen und Arbeit entkoppeln und deshalb wirtschaftliche und politische Teilhabe auch unter den Rahmenbedingungen einer weitgehenden Automatisierung ermöglichen~\cite{werner08}.
+
+\printbibliography
+
+\end{document}  
