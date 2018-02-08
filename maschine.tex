@@ -9,10 +9,16 @@ autolang=other,
 %bibencoding=UTF8
 ]{biblatex}
 \addbibresource{maschine.bib}
+% Literaturverzeichnis mit Nummern in Klammern wie [3]
+\DeclareFieldFormat{labelnumberwidth}{[#1]}
 % Zeilenumbruch in Links
 \setcounter{biburllcpenalty}{7000}
 \setcounter{biburlucpenalty}{8000}
 \usepackage{hyperref}
+
+% Keine Einrückung am Anfang eines Absatzes
+%\setlength{\parindent}{0pt} % Einrücken der ersten Zeile
+%\setlength{\parskip}{0.2\baselineskip} % Abstand zwischen Absätzen
 
 % ColumnChart
 \usepackage{pgfplots}
